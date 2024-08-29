@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./res_styl.css">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link id="jos-stylesheet" rel="stylesheet" href="https://unpkg.com/jos-animation/dist/jos.css"
+    <link href="./dependency/aos.css" rel="stylesheet">
+    <link id="jos-stylesheet" rel="stylesheet" href="./dependency/jos.css"
         crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    <link rel="stylesheet" href="./dependency/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        href="./dependency/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -30,9 +30,14 @@
         <div class="logo">
             <img src="./images/logo.png" alt="Logo">
         </div>
-
+    
         <nav class="navbar">
-            <ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-items">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#works">Works</a></li>
@@ -40,13 +45,15 @@
                 <li><a href="#team">Team</a></li>
                 <li><a href="https://blog.projectlina.org/" target="_blank">Blog</a></li>
                 <li><a href="https://shop.projectlina.org/" target="_blank">Shop</a></li>
+                <li><a href="#contact" id="donate">Donate</a></li>
             </ul>
         </nav>
-
+    
         <div class="contact-button">
             <a href="#contact">Donate</a>
         </div>
     </header>
+    
 
     <section id="home">
         <h1 class="home-title jos" >
@@ -713,13 +720,13 @@
 
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./dependency/aos.js"></script>
+    <script src="./dependency/jquery.min.js"></script>
 
 
-    <script src="https://unpkg.com/jos-animation/dist/jos.min.js"> </script>
+    <script src="./dependency/jos.min.js"> </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    <script src="./dependency/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -770,7 +777,10 @@
             }
         });
 
-
+        //document.querySelector('.hamburger').addEventListener('click', function () {
+        //    document.querySelector('.navbar').classList.toggle('active');
+        //});
+        
 
     </script>
 
