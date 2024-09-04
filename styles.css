@@ -418,8 +418,8 @@ header {
     }
 
     .jwat {
-        font-size: 12px !important;
-        padding-top: 19.9px !important;
+        font-size: 9px !important;
+        padding-top: 28.9px !important;
     }
 
 
@@ -1124,7 +1124,7 @@ section {
     left: 50%;
     margin-left: -21px;
     background: linear-gradient(90deg, #4D4DFF, #2E2E99);
-    z-index: 100;
+    z-index: 10;
     display: table;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -1161,8 +1161,11 @@ section {
     right: auto;
 }
 
+
+
+
 .timeline-title {
-    margin-top: 0;
+    margin-top: 45px;
     color: #E1E1FF;
 }
 
@@ -1191,7 +1194,7 @@ section {
 
 #sponsors {
     padding: 5vw 0;
-    min-height: 280px !important;
+    min-height: 100px !important;
 }
 
 .sponsor-marquee-carousel {
@@ -1337,7 +1340,9 @@ section {
 }
 
 .card {
-    height: 470px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    height: 320px;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 40px 40px -20px #8fc7d544;
@@ -1855,6 +1860,27 @@ section {
 
 
 
+/* ------------------ Pop Up Section--------------------- */
+
+
+
+.blur_bg {
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background-color: #00000077;
+    z-index: 9;
+    position: fixed;
+  
+  
+  }
+  
+  #blur_bg {
+  
+    display: none;
+  }
+
+
 
 
 @media (max-width: 768px) {
@@ -1882,7 +1908,7 @@ section {
         margin-top: 40px;
     }
 
-    .item-image .item-details:hover  {
+    .item-image .item-details:hover {
         width: 100%;
         height: auto;
         overflow: hidden;
@@ -1890,4 +1916,177 @@ section {
         justify-content: center;
         align-items: center;
     }
+
+    .topic-img-con {
+        height: 200px;
+        width: 200px;
+        background-color: var(--circ);
+        border-radius: 54% 46% 70% 30% / 30% 68% 32% 70%;
+        animation: morph 10s ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .tic1 {
+        height: 200px;
+        width: 200px;
+        background-color: var(--circ);
+        border-radius: 58% 42% 29% 71% / 63% 58% 42% 37%;
+        animation: morph1 5s ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .topic-head {
+        color: white;
+        font-size: 35px;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+
+    .ano {
+        padding-top: 0rem;
+        padding-bottom: 5rem;
+    }
+
+    .topic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topi {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        margin: 0;
+        padding: 7vw;
+    }
+
+    .topic-desc {
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 0%;
+        padding-top: 5%;
+        text-align: center;
+    }
+
+    .bg-wrap svg {
+        height: 187vh;
+    }
+
+
+    .loca {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+        color: white;
+        width: 100%;
+    }
+
+    .locam {
+        width: 90%;
+        height: 50vh;
+        max-height: 35vh;
+        max-width: unset;
+        border-radius: 14px;
+    }
+
+    .locamm {
+        top: 0px;
+        /* display: flex; */
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        min-height: 20vh;
+        min-width: 10vw;
+        max-height: 38vh;
+        max-width: unset;
+    }
+
+    .locamm h3 {
+        text-align: center;
+        width: 100%;
+        /* margin-right: 7vw; */
+        font-size: 2.3vh;
+        /* font-size: 2.6vw; */
+    }
+
+    .locmi {
+        font-size: 1.3vh;
+        /* font-size: 1.2vw; */
+        font-weight: 100;
+        color: white;
+        line-height: 2vh;
+        padding-top: 1.8vh;
+        padding-bottom: 3vh;
+        text-align: center;
+    }
+
+    .locmi {
+        display: block;
+    }
+
+    .loca {
+        gap: 3vh;
+    }
+
+    .locamm {
+        top: 0px;
+        min-height: 0;
+        max-width: unset;
+    }
+
+    .locamm h3 {
+        padding-bottom: 1em;
+    }
+
+    .con_lm {
+        display: flex;
+        margin: 0vw 10vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .con_l {
+        margin-left: 0rem;
+    }
+
+    .con_m {
+        display: none;
+    }
+
+    .timeline-title {
+        margin-top: 21px;
+    }
+
+    .locamm h3 {
+        font-size: 5.3vh;
+    }
+
+    .locmi {
+        font-size: 2.3vh;
+        line-height: 4vh;
+    }
+
+    .about-description {
+        margin: 0;
+        font-size: 2.2vw;
+        width: 102%;
+    }
+
+    .about-title {
+        font-size: 4vw;
+        width: 106%;
+    }
+
+    .timeline > li > .timeline-panel {
+        margin-right: 19px;
+        }
+
 }

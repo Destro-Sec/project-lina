@@ -8,16 +8,15 @@
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./res_styl.css">
+    <link rel="stylesheet" href="./dependency/icomoon/icomoon.css">
 
     <link href="./dependency/aos.css" rel="stylesheet">
-    <link id="jos-stylesheet" rel="stylesheet" href="./dependency/jos.css"
-        crossorigin="anonymous" />
+    <link id="jos-stylesheet" rel="stylesheet" href="./dependency/jos.css" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="./dependency/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="./dependency/owl.theme.default.min.css"
+    <link rel="stylesheet" href="./dependency/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -26,11 +25,12 @@
 </head>
 
 <body>
+    <section class="blur_bg" id="blur_bg" onclick="blurScreen()"></section>
     <header class="top-header">
         <div class="logo">
             <img src="./images/logo.png" alt="Logo">
         </div>
-    
+
         <nav class="navbar">
             <div class="hamburger">
                 <span></span>
@@ -45,18 +45,55 @@
                 <li><a href="#team">Team</a></li>
                 <li><a href="https://blog.projectlina.org/" target="_blank">Blog</a></li>
                 <li><a href="https://shop.projectlina.org/" target="_blank">Shop</a></li>
-                <li><a href="#contact" id="donate">Donate</a></li>
             </ul>
         </nav>
-    
+
         <div class="contact-button">
             <a href="#contact">Donate</a>
         </div>
     </header>
-    
+
+    <section id="OurWorkSoFar">
+        <div class="boir" id="boir">
+            <div class="cls" id="x" onClick="reg_view(this.id)"><a>x</a></div>
+            <div class="even_name" id="reg_ti">--Auto Title Here--</div>
+            <div class="even_slog" id="reg_slog">--Auto Slogan Here--</div>
+            <div class="popc">
+              <div class="hi">
+                <div class="even_d_t"><u>Description</u></div>
+                <div class="even_desc" id="reg_cont">--Auto Description Here--</div>
+              </div>
+              <div>|</div>
+              <div class="cenli"></div>
+              <div class="hi">
+                <div class="even_d_t ccc"><u>Rules</u></div>
+        
+        
+                <ul class="even_desc_r" id="reg_rules" style="list-style-type: square;">
+                  --Auto Rules Here--
+                </ul>
+              </div>
+        
+              <div class="botbut">
+                <a class="b1" id="reg_con" target="_blank" href="">Contact</a>
+                <a class="b2" href="https://maps.app.goo.gl/DpG8QFxpqVYTjgKj6" target="_blank">Venue</a>
+                <a class="b4" id="reg_po" href="https://psr.edu.in/electrovista2k24/" target="_blank">Poster</a>
+                <a class="b5" id="reg_sha" onclick="return copyTextFromElement();" href="">Share</a>
+                <input type="text" value="https://psr.edu.in/electrovista2k24/" id="myInput" style="display: none;">
+        
+        
+                <a class="b3" id="reg_reg" href="https://psr.edu.in/" target="_blank">Register</a>
+        
+              </div>
+            </div>
+          </div>
+    </section>
+    <section id="OfficeBearers" style="display: none;"></section>
+    <section id="WorkWithUs" style="display: none;"></section>
+
 
     <section id="home">
-        <h1 class="home-title jos" >
+        <h1 class="home-title jos">
             Project L.I.N.A
         </h1>
         <div class="baff">
@@ -64,7 +101,7 @@
                 data-aos-once="true">Towards Singularity
             </p>
         </div>
-        <div class="about-bl" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true" >
+        <div class="about-bl" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
             <a href="./whitepaper/">Read Whitepaper</a>
         </div>
     </section>
@@ -201,7 +238,8 @@
                         </div>
                         <div class="item-details">
                             <p>L.I.N.A Tech - Functioning as the primary R&D wing, LT focuses on progressive and
-                                integrative research and implementation of augmentative AI. <br> <br> <br>LT works according to a
+                                integrative research and implementation of augmentative AI. <br> <br> <br>LT works
+                                according to a
                                 set of proprietary principles, championing an ethics-first and user-oriented approach
                                 that prioritizes user privacy and private data security.</p>
                         </div>
@@ -241,7 +279,8 @@
                         <div class="item-details">
                             <p>
                                 LINA Foundation - Functioning as the central welfare wing, It aims to foster an
-                                inclusive and mutually collaborative spirit within stakeholders in the AI space. <br> <br> <br>
+                                inclusive and mutually collaborative spirit within stakeholders in the AI space. <br>
+                                <br> <br>
 
                                 LF further operates various targeted welfare initiatives aimed at promoting ethical and
                                 beneficial integration of AI into society alongside other causes aimed at creating a
@@ -272,26 +311,28 @@
                     </li>
                     <br><br><br><br><br>
                     <li class="animate-box timeline-unverted">
-                        <div class="timeline-badge"><i class="icon-suitcase"></i></div>
+
+                        <div class="timeline-badge"><i class="icon-key"></i></div>
                         <div class="timeline-panel" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
                             <div class="timeline-heading">
                                 <h3 class="timeline-title">The Athena Initiative</h3>
                                 <!-- <span class="company">Destro Sec - 2018 - Current</span> -->
                             </div>
                             <!-- <div class="timeline-body">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </p>
-                            </div>
-                        </div> -->
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </div> -->
+
                     </li>
                     <br><br><br><br><br>
                     <li class="timeline-inverted animate-box">
-                        <div class="timeline-badge"><i class="icon-suitcase"></i></div>
+                        <div class="timeline-badge"><i class="icon-lock"></i></div>
                         <div class="timeline-panel" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000">
                             <div class="timeline-heading">
-                                <h3 class="timeline-title">Aaria LLM </h3>
+                                <h3 class="timeline-title" style="text-decoration: line-through;">&nbsp;&nbsp; Aaria LLM
+                                    &nbsp;&nbsp;</h3>
                                 <!-- <span class="company">Ayshwarya technologies - 2022 - 2023</span> -->
                             </div>
                             <!-- <div class="timeline-body">
@@ -304,10 +345,11 @@
                     </li>
                     <br><br><br><br><br>
                     <li class="animate-box timeline-unverted">
-                        <div class="timeline-badge"><i class="icon-suitcase"></i></div>
+                        <div class="timeline-badge"><i class="icon-lock"></i></div>
                         <div class="timeline-panel" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
                             <div class="timeline-heading">
-                                <h3 class="timeline-title">The Pali Initiative</h3>
+                                <h3 class="timeline-title" style="text-decoration: line-through;">&nbsp;&nbsp;The Pali
+                                    Initiative&nbsp;&nbsp;</h3>
                                 <!-- <span class="company">Arun Computers - 2020 - 2022</span> -->
                             </div>
                             <!-- <div class="timeline-body">
@@ -320,10 +362,11 @@
                     </li>
                     <br><br><br><br><br>
                     <li class="timeline-inverted animate-box">
-                        <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+                        <div class="timeline-badge"><i class="icon-lock"></i></div>
                         <div class="timeline-panel" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000">
                             <div class="timeline-heading">
-                                <h3 class="timeline-title">Operation Charles</h3>
+                                <h3 class="timeline-title" style="text-decoration: line-through;">&nbsp;&nbsp;Operation
+                                    Charles&nbsp;&nbsp;</h3>
                                 <!-- <span class="company">P.S.R.Engineering College - 2021 - 2025</span> -->
                             </div>
                             <!-- <div class="timeline-body">
@@ -337,10 +380,11 @@
                     <br><br><br><br><br>
 
                     <li class="animate-box timeline-unverted">
-                        <div class="timeline-badge"><i class="icon-suitcase"></i></div>
+                        <div class="timeline-badge"><i class="icon-lock"></i></div>
                         <div class="timeline-panel" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
                             <div class="timeline-heading">
-                                <h3 class="timeline-title">The Kalam Venture</h3>
+                                <h3 class="timeline-title" style="text-decoration: line-through;">&nbsp;&nbsp;The Kalam
+                                    Venture&nbsp;&nbsp;</h3>
                                 <!-- <span class="company">Destro Sec - 2018 - Current</span> -->
                             </div>
                             <!-- <div class="timeline-body">
@@ -353,10 +397,11 @@
                     </li>
                     <br><br><br><br><br>
                     <li class="timeline-inverted animate-box">
-                        <div class="timeline-badge"><i class="icon-suitcase"></i></div>
+                        <div class="timeline-badge"><i class="icon-lock"></i></div>
                         <div class="timeline-panel" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000">
                             <div class="timeline-heading">
-                                <h3 class="timeline-title">Operation Jobs </h3>
+                                <h3 class="timeline-title" style="text-decoration: line-through;">&nbsp;&nbsp;Operation
+                                    Jobs &nbsp;&nbsp;</h3>
                                 <!-- <span class="company">Ayshwarya technologies - 2022 - 2023</span> -->
                             </div>
                             <!-- <div class="timeline-body">
@@ -369,10 +414,11 @@
                     </li>
                     <br><br><br><br><br>
                     <li class="animate-box timeline-unverted">
-                        <div class="timeline-badge"><i class="icon-suitcase"></i></div>
+                        <div class="timeline-badge"><i class="icon-lock"></i></div>
                         <div class="timeline-panel" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
                             <div class="timeline-heading">
-                                <h3 class="timeline-title">The Joyphone X</h3>
+                                <h3 class="timeline-title" style="text-decoration: line-through;">&nbsp;&nbsp;The
+                                    Joyphone X&nbsp;&nbsp;</h3>
                                 <!-- <span class="company">Arun Computers - 2020 - 2022</span> -->
                             </div>
                             <!-- <div class="timeline-body">
@@ -426,7 +472,7 @@
         </div> -->
 
 
-        <section id="sponsors">
+        <!-- <section id="sponsors">
             <div class="sponsor-carousel owl-carousel">
                 <div class="carousel-item">
                     <img src="./images/ds_logo.png" alt="Sponsor Logo">
@@ -441,7 +487,7 @@
                     <img src="./images/ds_logo.png" alt="Sponsor Logo">
                 </div>
             </div>
-        </section>
+        </section> -->
 
     </section>
 
@@ -481,10 +527,7 @@
                 <h3>Joker</h3>
             </div>
 
-            <div class="panel "
-                style="background-image: url(https://raw.githubusercontent.com/karuppan-the-pentester/7-days-70-project/master/01-Expanding%20Cards/img/Snow.jpg);">
-                <h3>Snow</h3>
-            </div>
+
 
         </div>
 
@@ -502,11 +545,11 @@
                         <a href=""><img src="./images/c1.png" alt="Unsplash Photo"></a>
                     </div>
                     <div class="card-content">
-                        <h6 class="tag tag-travel">Contribute to Tech for Orange</h6>
+                        <!-- <h6 class="tag tag-travel"> for Orange</h6> -->
                         <a href="">
-                            <h3 class="title">A.T.H.E.N.A</h3>
+                            <h3 class="title">Contribute to Tech</h3>
                         </a>
-                        <p>Advance Advocate Management Ai</p>
+                        <!-- <p>Advance Advocate Management Ai</p> -->
                     </div>
                 </div>
 
@@ -515,12 +558,12 @@
                         <a href=""><img src="./images/c2.png" alt="Unsplash Photo"></a>
                     </div>
                     <div class="card-content">
-                        <h6 class="tag tag-travel">Contribute to Fund for Green
+                        <!-- <h6 class="tag tag-travel"> for Green -->
                         </h6>
                         <a href="">
-                            <h3 class="title">A.T.H.E.N.A</h3>
+                            <h3 class="title">Contribute to Fund</h3>
                         </a>
-                        <p>Advance Advocate Management Ai</p>
+                        <!-- <p>Advance Advocate Management Ai</p> -->
                     </div>
                 </div>
 
@@ -529,11 +572,11 @@
                         <a href=""><img src="./images/c3.png" alt="Unsplash Photo"></a>
                     </div>
                     <div class="card-content">
-                        <h6 class="tag tag-travel">Contribute to Network for Blue</h6>
+                        <!-- <h6 class="tag tag-travel"> for Blue</h6> -->
                         <a href="">
-                            <h3 class="title">A.T.H.E.N.A</h3>
+                            <h3 class="title">Contribute to Network</h3>
                         </a>
-                        <p>Advance Advocate Management Ai</p>
+                        <!-- <p>Advance Advocate Management Ai</p> -->
                     </div>
                 </div>
             </div>
@@ -555,9 +598,7 @@
             <div class="locac fade" data-aos="zoom-out-down" data-aos-duration="600">
                 <div>
                     <div class="loca ">
-                        <iframe class="locam"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3937.481013090294!2d77.69839907491246!3d9.29057619078156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06b85670932313%3A0xd8caf94254b94c1a!2sPSR%20Engineering%20College!5e0!3m2!1sen!2sin!4v1704792586547!5m2!1sen!2sin"
-                            allowfullscreen=""></iframe>
+                        <img class="locam" src="./images/hq.jpeg"></img>
 
                         <!-- loading="lazy" -->
 
@@ -612,38 +653,7 @@
                 </ul>
             </div> -->
 
-            <script>
-                var slideIndex = 1;
-                showSlides(slideIndex);
 
-                function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                }
-
-                function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                }
-
-                function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("locac");
-                    var dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) { slideIndex = 1 }
-                    if (n < 1) { slideIndex = slides.length }
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" current", "");
-                    }
-                    slides[slideIndex - 1].style.display = "block";
-
-                    if (n == 1) {
-                        document.getElementById('Loconn').innerHTML = "Location";
-                    } else { document.getElementById('Loconn').innerHTML = "Contact"; }
-
-                }
-            </script>
         </div>
         <br> <br> <br>
 
@@ -707,7 +717,7 @@
 
         <div class="last_pa">
             <div class="divilin">
-                <div class="jwat">All Rights Reserved | Copyright ©2024 |<a class="meee"
+                <div class="jwat">All Rights Reserved | Copyright © 2024 |<a class="meee"
                         href="https://karuppan-the-pentester.github.io" target="_blank">&nbsp;Website By &nbsp;<div
                             class="glow">Destro-Sec</div></a></div>
             </div>
@@ -780,7 +790,7 @@
         //document.querySelector('.hamburger').addEventListener('click', function () {
         //    document.querySelector('.navbar').classList.toggle('active');
         //});
-        
+
 
     </script>
 
@@ -959,6 +969,16 @@
             });
         });
 
+
+    </script>
+
+
+    <script>
+        function blurScreen() {
+            document.getElementById("blurbg").style.display = "none";
+
+
+        }
 
     </script>
 
