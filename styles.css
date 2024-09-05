@@ -127,6 +127,43 @@
 
 }
 
+/* Typewriting effect */
+@keyframes typewrite {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkDot {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.animm {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid transparent;
+    /* Remove blinking cursor */
+    width: 0;
+    animation: typewrite 4s steps(30) forwards;
+    /* Adjust the time for speed */
+}
+
+
 
 
 
@@ -1177,6 +1214,51 @@ section {
     color: #bfbfbf;
 }
 
+@keyframes typewrite {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkDot {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.animm {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid transparent;
+    /* Remove cursor */
+    width: 0;
+    animation: typewrite 4s steps(30) forwards, blinkDot 1s;
+    /* Combines both typewriting and blinking dot */
+}
+
+.animm::after {
+    content: '.';
+    /* The dot instead of a cursor */
+    opacity: 0;
+    animation: blinkDot 1s infinite;
+    /* Makes the dot blink */
+}
+
+
+
 .timeline-body>p,
 .timeline-body>ul {
     font-family: "azerete";
@@ -1489,6 +1571,9 @@ section {
     background-color: #6969692a;
     overflow: hidden;
 }
+
+
+
 
 .dotstyle {
     width: 100%;
@@ -1869,17 +1954,704 @@ section {
     width: 100%;
     backdrop-filter: blur(5px);
     background-color: #00000077;
-    z-index: 9;
+    z-index: 90;
     position: fixed;
-  
-  
-  }
-  
-  #blur_bg {
-  
-    display: none;
-  }
 
+
+}
+
+#blur_bg {
+    display: none;
+}
+
+#OurWorkSoFar {
+    display: none;
+}
+
+
+
+.boir {
+    border: 2px solid rgba(119, 119, 119, 0.555);
+    height: 70%;
+    width: 70%;
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%, -58%);
+    position: fixed;
+    background-color: black;
+    border-radius: 7px;
+    color: black;
+    transition: 0.3s ease-out;
+
+}
+
+#boir {
+
+    visibility: hidden;
+    display: block;
+    z-index: 100;
+}
+
+#OurWorkSoFar .cls {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 50%;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#OurWorkSoFar .cls:hover {
+    color: black;
+    background-color: white;
+}
+
+#OurWorkSoFar .even_slog {
+    font-size: 0.8vw;
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+    margin-top: 0.7em;
+    color: white;
+    font-weight: 300;
+    margin-left: -15%;
+}
+
+#OurWorkSoFar .even_name {
+    font-size: 1.6vw;
+    text-align: center;
+    width: 100%;
+    margin-top: 5vh;
+    color: white;
+    margin-left: -15%;
+}
+
+#OurWorkSoFar .event_main {
+    border: 2px solid rgba(255, 255, 255, 0);
+    padding: 2vw;
+    position: relative;
+    margin-top: 8%;
+
+    margin-bottom: 3%;
+}
+
+#OurWorkSoFar .popc {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+#OurWorkSoFar .even_desc {
+
+    line-height: 1.3vw;
+    text-align: left;
+    width: 30vw;
+    margin-top: 2em;
+    color: white;
+    font-weight: 300;
+    padding-top: 0px;
+    margin-right: -4vw;
+    list-style-type: circle;
+    padding-inline-start: 40px;
+    padding: 7%;
+    font-size: 0.98vw;
+    padding-top: 0%;
+
+}
+
+#OurWorkSoFar .even_desc_r {
+    font-size: 0.8vw;
+    line-height: 1.2vw;
+    text-align: left;
+    width: 30vw;
+    margin-top: 2em;
+    color: white;
+    font-weight: 300;
+    margin-right: -4vw;
+    list-style-type: circle;
+    display: block;
+    padding: 7%;
+    padding-top: 0%;
+
+}
+
+#OurWorkSoFar .hi {
+    margin-top: 2%;
+}
+
+#OurWorkSoFar .even_d_t {
+
+    font-size: 1.8vw;
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-weight: 300;
+    padding: 0%;
+
+}
+
+#OurWorkSoFar .cenli {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.411);
+    height: 40%;
+    left: 34%;
+    top: 55%;
+    transform: translate(-50%, -55%);
+}
+
+
+#OurWorkSoFar .b1,
+#OurWorkSoFar .b2,
+#OurWorkSoFar .b4,
+#OurWorkSoFar .b5 {
+    padding: 0.5vw 0.6vw 0.5vw 0.6vw;
+    font-size: 0.8vw;
+    border: 1px solid white;
+    color: white;
+    margin-right: 0.7vw;
+    border-radius: 3px;
+    min-width: 5vw;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+#OurWorkSoFar .b1:hover,
+#OurWorkSoFar .b2:hover,
+#OurWorkSoFar .b4:hover,
+#OurWorkSoFar .b5:hover {
+
+    color: black;
+    background-color: white;
+}
+
+#OurWorkSoFar .b3 {
+    padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+    font-size: 1vw;
+    border: 1px solid white;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 3px;
+    right: 20%;
+    position: absolute;
+    margin-left: 0.5vw;
+    transition: 0.3s ease-in-out;
+
+    color: black;
+    background-color: white;
+}
+
+#OurWorkSoFar .b3:hover {
+
+    color: white;
+    background-color: black;
+}
+
+
+#OurWorkSoFar .popc .hi img {
+    width: 50%;
+    border-radius: 60%;
+    margin-top: 45px;
+    margin-left: 60px;
+}
+
+
+
+#OurWorkSoFar .botbut {
+    position: absolute;
+    border: 2px solid rgba(255, 255, 255, 0);
+    width: 100%;
+    bottom: 8%;
+    padding-left: 7%;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#OurWorkSoFar .about_hi {
+    margin-top: 0;
+    width: 70%;
+}
+
+
+
+
+
+
+#OfficeBearers {
+    display: none;
+}
+
+
+
+#OfficeBearers .boir {
+    border: 2px solid rgba(119, 119, 119, 0.555);
+    height: 70%;
+    width: 70%;
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%, -58%);
+    position: fixed;
+    background-color: black;
+    border-radius: 7px;
+    color: black;
+    transition: 0.3s ease-out;
+    z-index: 100;
+
+}
+
+
+
+
+#OfficeBearers #boir {
+
+    visibility: hidden;
+    display: block;
+
+}
+
+
+
+#OfficeBearers .cls {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 50%;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#OfficeBearers .cls:hover {
+    color: black;
+    background-color: white;
+}
+
+#OfficeBearers .even_slog {
+    font-size: 0.8vw;
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+    margin-top: 0.7em;
+    color: white;
+    font-weight: 300;
+    margin-left: -15%;
+}
+
+#OfficeBearers .even_name {
+    font-size: 1.6vw;
+    text-align: center;
+    width: 100%;
+    margin-top: 5vh;
+    color: white;
+    margin-left: -15%;
+}
+
+#OfficeBearers .event_main {
+    border: 2px solid rgba(255, 255, 255, 0);
+    padding: 2vw;
+    position: relative;
+    margin-top: 8%;
+
+    margin-bottom: 3%;
+}
+
+#OfficeBearers .popc {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+#OfficeBearers .even_desc {
+
+    line-height: 1.3vw;
+    text-align: left;
+    width: 30vw;
+    margin-top: 2em;
+    color: white;
+    font-weight: 300;
+    padding-top: 0px;
+    margin-right: -4vw;
+    list-style-type: circle;
+    padding-inline-start: 40px;
+    padding: 7%;
+    font-size: 0.98vw;
+    padding-top: 0%;
+
+}
+
+#OfficeBearers .even_desc_r {
+    font-size: 0.8vw;
+    line-height: 1.2vw;
+    text-align: left;
+    width: 30vw;
+    margin-top: 2em;
+    color: white;
+    font-weight: 300;
+    margin-right: -4vw;
+    list-style-type: circle;
+    display: block;
+    padding: 7%;
+    padding-top: 0%;
+
+}
+
+#OfficeBearers .hi {
+    margin-top: 2%;
+}
+
+#OfficeBearers .even_d_t {
+
+    font-size: 1.8vw;
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-weight: 300;
+    padding: 0%;
+
+}
+
+#OfficeBearers .cenli {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.411);
+    height: 40%;
+    left: 34%;
+    top: 55%;
+    transform: translate(-50%, -55%);
+}
+
+
+#OfficeBearers .b1,
+#OfficeBearers .b2,
+#OfficeBearers .b4,
+#OfficeBearers .b5 {
+    padding: 0.5vw 0.6vw 0.5vw 0.6vw;
+    font-size: 0.8vw;
+    border: 1px solid white;
+    color: white;
+    margin-right: 0.7vw;
+    border-radius: 3px;
+    min-width: 5vw;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+#OfficeBearers .b1:hover,
+#OfficeBearers .b2:hover,
+#OfficeBearers .b4:hover,
+#OfficeBearers .b5:hover {
+
+    color: black;
+    background-color: white;
+}
+
+#OfficeBearers .b3 {
+    padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+    font-size: 1vw;
+    border: 1px solid white;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 3px;
+    right: 20%;
+    position: absolute;
+    margin-left: 0.5vw;
+    transition: 0.3s ease-in-out;
+
+    color: black;
+    background-color: white;
+}
+
+#OfficeBearers .b3:hover {
+
+    color: white;
+    background-color: black;
+}
+
+
+#OfficeBearers .popc .hi img {
+    width: 50%;
+    border-radius: 60%;
+    margin-top: 45px;
+    margin-left: 60px;
+}
+
+
+
+#OfficeBearers .botbut {
+    position: absolute;
+    border: 2px solid rgba(255, 255, 255, 0);
+    width: 100%;
+    bottom: 8%;
+    padding-left: 7%;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#OfficeBearers .about_hi {
+    margin-top: 0;
+    width: 70%;
+}
+
+
+
+
+#WorkWithUs {
+    display: none;
+}
+
+
+
+#WorkWithUs .boir {
+    border: 2px solid rgba(119, 119, 119, 0.555);
+    height: 70%;
+    width: 70%;
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%, -58%);
+    position: fixed;
+    background-color: black;
+    border-radius: 7px;
+    color: black;
+    transition: 0.3s ease-out;
+    z-index: 100;
+
+}
+
+
+
+
+#WorkWithUs #boir {
+
+    visibility: hidden;
+    display: block;
+
+}
+
+
+
+#WorkWithUs .cls {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 50%;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#WorkWithUs .cls:hover {
+    color: black;
+    background-color: white;
+}
+
+#WorkWithUs .even_slog {
+    font-size: 0.8vw;
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+    margin-top: 0.7em;
+    color: white;
+    font-weight: 300;
+    margin-left: -15%;
+}
+
+#WorkWithUs .even_name {
+    font-size: 1.6vw;
+    text-align: center;
+    width: 100%;
+    margin-top: 5vh;
+    color: white;
+    margin-left: -15%;
+}
+
+#WorkWithUs .event_main {
+    border: 2px solid rgba(255, 255, 255, 0);
+    padding: 2vw;
+    position: relative;
+    margin-top: 8%;
+
+    margin-bottom: 3%;
+}
+
+#WorkWithUs .popc {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+#WorkWithUs .even_desc {
+
+    line-height: 1.3vw;
+    text-align: left;
+    width: 30vw;
+    margin-top: 2em;
+    color: white;
+    font-weight: 300;
+    padding-top: 0px;
+    margin-right: -4vw;
+    list-style-type: circle;
+    padding-inline-start: 40px;
+    padding: 7%;
+    font-size: 0.98vw;
+    padding-top: 0%;
+
+}
+
+#WorkWithUs .even_desc_r {
+    font-size: 0.8vw;
+    line-height: 1.2vw;
+    text-align: left;
+    width: 30vw;
+    margin-top: 2em;
+    color: white;
+    font-weight: 300;
+    margin-right: -4vw;
+    list-style-type: circle;
+    display: block;
+    padding: 7%;
+    padding-top: 0%;
+
+}
+
+#WorkWithUs .hi {
+    margin-top: 2%;
+}
+
+#WorkWithUs .even_d_t {
+
+    font-size: 1.8vw;
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-weight: 300;
+    padding: 0%;
+
+}
+
+#WorkWithUs .cenli {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.411);
+    height: 40%;
+    left: 34%;
+    top: 55%;
+    transform: translate(-50%, -55%);
+}
+
+
+#WorkWithUs .b1,
+#WorkWithUs .b2,
+#WorkWithUs .b4,
+#WorkWithUs .b5 {
+    padding: 0.5vw 0.6vw 0.5vw 0.6vw;
+    font-size: 0.8vw;
+    border: 1px solid white;
+    color: white;
+    margin-right: 0.7vw;
+    border-radius: 3px;
+    min-width: 5vw;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+#WorkWithUs .b1:hover,
+#WorkWithUs .b2:hover,
+#WorkWithUs .b4:hover,
+#WorkWithUs .b5:hover {
+
+    color: black;
+    background-color: white;
+}
+
+#WorkWithUs .b3 {
+    padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+    font-size: 1vw;
+    border: 1px solid white;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 3px;
+    right: 20%;
+    position: absolute;
+    margin-left: 0.5vw;
+    transition: 0.3s ease-in-out;
+
+    color: black;
+    background-color: white;
+}
+
+#WorkWithUs .b3:hover {
+
+    color: white;
+    background-color: black;
+}
+
+
+#WorkWithUs .popc .hi img {
+    width: 50%;
+    border-radius: 60%;
+    margin-top: 45px;
+    margin-left: 60px;
+}
+
+
+
+#WorkWithUs .botbut {
+    position: absolute;
+    border: 2px solid rgba(255, 255, 255, 0);
+    width: 100%;
+    bottom: 8%;
+    padding-left: 7%;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#WorkWithUs .about_hi {
+    margin-top: 0;
+    width: 70%;
+}
 
 
 
@@ -2085,8 +2857,167 @@ section {
         width: 106%;
     }
 
-    .timeline > li > .timeline-panel {
+    .timeline>li>.timeline-panel {
         margin-right: 19px;
-        }
+    }
 
+    #OurWorkSoFar .even_name {
+        font-size: 5.6vw;
+        margin-left: 0;
+    }
+
+    #OurWorkSoFar .even_slog {
+        font-size: 2.3vw;
+        margin-left: 0;
+    }
+
+    #OurWorkSoFar .popc {
+        flex-direction: column;
+    }
+
+    #OurWorkSoFar .popc .hi img {
+        margin-top: 28px;
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    #OurWorkSoFar .cenli {
+        display: none;
+    }
+
+
+    #OurWorkSoFar .about_hi {
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    #OurWorkSoFar .even_d_t {
+        font-size: 3.8vw;
+    }
+
+    #OurWorkSoFar .even_desc_r {
+        font-size: 0.8vw;
+        width: 30vw;
+        margin-top: 2em;
+        font-size: 2vw;
+        width: 100%;
+        margin-top: 3em;
+    }
+
+    #OurWorkSoFar .b3 {
+        font-size: 1vw;
+        right: 20%;
+        font-size: 3vw;
+        right: 28%;
+    }
+
+
+
+
+
+
+    #OfficeBearers .even_name {
+        font-size: 5.6vw;
+        margin-left: 0;
+    }
+
+    #OfficeBearers .even_slog {
+        font-size: 2.3vw;
+        margin-left: 0;
+    }
+
+    #OfficeBearers .popc {
+        flex-direction: column;
+    }
+
+    #OfficeBearers .popc .hi img {
+        margin-top: 28px;
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    #OfficeBearers .cenli {
+        display: none;
+    }
+
+
+    #OfficeBearers .about_hi {
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    #OfficeBearers .even_d_t {
+        font-size: 3.8vw;
+    }
+
+    #OfficeBearers .even_desc_r {
+        font-size: 0.8vw;
+        width: 30vw;
+        margin-top: 2em;
+        font-size: 2vw;
+        width: 100%;
+        margin-top: 3em;
+    }
+
+    #OfficeBearers .b3 {
+        font-size: 1vw;
+        right: 20%;
+        font-size: 3vw;
+        right: 28%;
+    }
+
+
+
+
+
+
+    #WorkWithUs .even_name {
+        font-size: 5.6vw;
+        margin-left: 0;
+    }
+
+    #WorkWithUs .even_slog {
+        font-size: 2.3vw;
+        margin-left: 0;
+    }
+
+    #WorkWithUs .popc {
+        flex-direction: column;
+    }
+
+    #WorkWithUs .popc .hi img {
+        margin-top: 28px;
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    #WorkWithUs .cenli {
+        display: none;
+    }
+
+
+    #WorkWithUs .about_hi {
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    #WorkWithUs .even_d_t {
+        font-size: 3.8vw;
+    }
+
+    #WorkWithUs .even_desc_r {
+        font-size: 0.8vw;
+        width: 30vw;
+        margin-top: 2em;
+        font-size: 2vw;
+        width: 100%;
+        margin-top: 3em;
+    }
+
+    #WorkWithUs .b3 {
+        font-size: 1vw;
+        right: 20%;
+        font-size: 3vw;
+        right: 28%;
+    }
 }

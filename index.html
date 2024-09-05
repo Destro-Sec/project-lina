@@ -26,6 +26,7 @@
 
 <body>
     <section class="blur_bg" id="blur_bg" onclick="blurScreen()"></section>
+    <!-- <section class="blur_bg" id="blur_bg" style="display: block;"></section> -->
     <header class="top-header">
         <div class="logo">
             <img src="./images/logo.png" alt="Logo">
@@ -53,43 +54,98 @@
         </div>
     </header>
 
-    <section id="OurWorkSoFar" style="display: none;">
+    <section id="OurWorkSoFar">
         <div class="boir" id="boir">
-            <div class="cls" id="x" onClick="reg_view(this.id)"><a>x</a></div>
-            <div class="even_name" id="reg_ti">--Auto Title Here--</div>
-            <div class="even_slog" id="reg_slog">--Auto Slogan Here--</div>
+            <div class="cls" id="x" onClick="blurScreen()"><a>x</a></div>
+            <div class="even_name" id="reg_ti">A.T.H.E.N.A</div>
+            <div class="even_slog" id="reg_slog">Advanced AI/ML</div>
             <div class="popc">
-              <div class="hi">
-                <div class="even_d_t"><u>Description</u></div>
-                <div class="even_desc" id="reg_cont">--Auto Description Here--</div>
-              </div>
-              <div>|</div>
-              <div class="cenli"></div>
-              <div class="hi">
-                <div class="even_d_t ccc"><u>Rules</u></div>
-        
-        
-                <ul class="even_desc_r" id="reg_rules" style="list-style-type: square;">
-                  --Auto Rules Here--
-                </ul>
-              </div>
-        
-              <div class="botbut">
-                <a class="b1" id="reg_con" target="_blank" href="">Contact</a>
-                <a class="b2" href="https://maps.app.goo.gl/DpG8QFxpqVYTjgKj6" target="_blank">Venue</a>
-                <a class="b4" id="reg_po" href="https://psr.edu.in/electrovista2k24/" target="_blank">Poster</a>
-                <a class="b5" id="reg_sha" onclick="return copyTextFromElement();" href="">Share</a>
-                <input type="text" value="https://psr.edu.in/electrovista2k24/" id="myInput" style="display: none;">
-        
-        
-                <a class="b3" id="reg_reg" href="https://psr.edu.in/" target="_blank">Register</a>
-        
-              </div>
+                <div class="hi">
+                    <img src="./images/p1.png" alt="" srcset="">
+                    <!-- <div class="even_d_t"><u>Description</u></div> -->
+                    <!-- <div class="even_desc" id="reg_cont">--Auto Description Here--</div> -->
+                </div>
+                <div class="cenli"></div>
+                <div class="hi about_hi">
+                    <div class="even_d_t ccc"><u>About</u></div>
+
+
+                    <ul class="even_desc_r" id="reg_rules" style="list-style-type: square;">
+                        --Auto Rules Here--
+                    </ul>
+                </div>
+
+                <div class="botbut">
+
+
+                    <a class="b3" id="reg_reg" href="#" target="_blank">Register for Waitlist</a>
+
+                </div>
             </div>
-          </div>
+        </div>
     </section>
-    <section id="OfficeBearers" style="display: none;"></section>
-    <section id="WorkWithUs" style="display: none;"></section>
+
+    <section id="OfficeBearers">
+        <div class="boir" id="boir b2">
+            <div class="cls" id="x" onClick="blurScreen()"><a>x</a></div>
+            <div class="even_name" id="reg_ti">Karthik</div>
+            <div class="even_slog" id="reg_slog">Advanced AI/ML</div>
+            <div class="popc">
+                <div class="hi">
+                    <img src="./images/p1.png" alt="" srcset="">
+                    <!-- <div class="even_d_t"><u>Description</u></div> -->
+                    <!-- <div class="even_desc" id="reg_cont">--Auto Description Here--</div> -->
+                </div>
+                <div class="cenli"></div>
+                <div class="hi about_hi">
+                    <div class="even_d_t ccc"><u>About</u></div>
+
+
+                    <ul class="even_desc_r" id="reg_rules" style="list-style-type: square;">
+                        --Auto Rules Here--
+                    </ul>
+                </div>
+
+                <div class="botbut">
+
+
+                    <a class="b3" id="reg_reg" href="#" target="_blank">Register for Waitlist</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="WorkWithUs">
+        <div class="boir" id="boir bi3">
+            <div class="cls" id="x" onClick="blurScreen()"><a>x</a></div>
+            <div class="even_name" id="reg_ti">Tech</div>
+            <div class="even_slog" id="reg_slog">Advanced AI/ML</div>
+            <div class="popc">
+                <div class="hi">
+                    <img src="./images/p1.png" alt="" srcset="">
+                    <!-- <div class="even_d_t"><u>Description</u></div> -->
+                    <!-- <div class="even_desc" id="reg_cont">--Auto Description Here--</div> -->
+                </div>
+                <div class="cenli"></div>
+                <div class="hi about_hi">
+                    <div class="even_d_t ccc"><u>About</u></div>
+
+
+                    <ul class="even_desc_r" id="reg_rules" style="list-style-type: square;">
+                        --Auto Rules Here--
+                    </ul>
+                </div>
+
+                <div class="botbut">
+
+
+                    <a class="b3" id="reg_reg" href="#" target="_blank">Register for Waitlist</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <section id="home">
@@ -306,24 +362,19 @@
                     <li class="timeline-heading text-center animate-box" style="text-align: center;" data-aos="fade-up"
                         data-aos-once="true" data-aos-duration="1000">
                         <div>
-                            <h3>Our Work So Far</h3>
+                            <h3>Lab</h3>
                         </div>
                     </li>
                     <br><br><br><br><br>
-                    <li class="animate-box timeline-unverted">
+                    <li class="animate-box timeline-unverted" id="athena" onclick="worksofar(this.id)">
 
                         <div class="timeline-badge"><i class="icon-key"></i></div>
                         <div class="timeline-panel" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
                             <div class="timeline-heading">
-                                <h3 class="timeline-title">The Athena Initiative</h3>
+                                <h3 class="timeline-title animm">The Athena Initiative</h3>
                                 <!-- <span class="company">Destro Sec - 2018 - Current</span> -->
                             </div>
-                            <!-- <div class="timeline-body">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </p>
-                                </div> -->
+
 
                     </li>
                     <br><br><br><br><br>
@@ -331,7 +382,8 @@
                         <div class="timeline-badge"><i class="icon-lock"></i></div>
                         <div class="timeline-panel" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000">
                             <div class="timeline-heading">
-                                <h3 class="timeline-title" style="text-decoration: line-through;">&nbsp;&nbsp; Aaria LLM
+                                <h3 class="timeline-title" style="text-decoration: line-through;">&nbsp;&nbsp; The
+                                    S.P.A.R.K Initiative
                                     &nbsp;&nbsp;</h3>
                                 <!-- <span class="company">Ayshwarya technologies - 2022 - 2023</span> -->
                             </div>
@@ -377,26 +429,9 @@
                             </div> -->
                         </div>
                     </li>
-                    <br><br><br><br><br>
 
-                    <li class="animate-box timeline-unverted">
-                        <div class="timeline-badge"><i class="icon-lock"></i></div>
-                        <div class="timeline-panel" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
-                            <div class="timeline-heading">
-                                <h3 class="timeline-title" style="text-decoration: line-through;">&nbsp;&nbsp;The Kalam
-                                    Venture&nbsp;&nbsp;</h3>
-                                <!-- <span class="company">Destro Sec - 2018 - Current</span> -->
-                            </div>
-                            <!-- <div class="timeline-body">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </p>
-                            </div> -->
-                        </div>
-                    </li>
                     <br><br><br><br><br>
-                    <li class="timeline-inverted animate-box">
+                    <li class="timeline-unverted animate-box">
                         <div class="timeline-badge"><i class="icon-lock"></i></div>
                         <div class="timeline-panel" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000">
                             <div class="timeline-heading">
@@ -413,13 +448,31 @@
                         </div>
                     </li>
                     <br><br><br><br><br>
-                    <li class="animate-box timeline-unverted">
+                    <li class="animate-box timeline-inverted">
                         <div class="timeline-badge"><i class="icon-lock"></i></div>
                         <div class="timeline-panel" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
                             <div class="timeline-heading">
                                 <h3 class="timeline-title" style="text-decoration: line-through;">&nbsp;&nbsp;The
                                     Joyphone X&nbsp;&nbsp;</h3>
                                 <!-- <span class="company">Arun Computers - 2020 - 2022</span> -->
+                            </div>
+                            <!-- <div class="timeline-body">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                </p>
+                            </div> -->
+                        </div>
+                    </li>
+                    <br><br><br><br><br>
+
+                    <li class="animate-box timeline-unverted">
+                        <div class="timeline-badge"><i class="icon-lock"></i></div>
+                        <div class="timeline-panel" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
+                            <div class="timeline-heading">
+                                <h3 class="timeline-title" style="text-decoration: line-through;">&nbsp;&nbsp;The Kalam
+                                    Venture&nbsp;&nbsp;</h3>
+                                <!-- <span class="company">Destro Sec - 2018 - Current</span> -->
                             </div>
                             <!-- <div class="timeline-body">
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -502,7 +555,7 @@
 
         <div class="container">
 
-            <div class="panel active"
+            <div class="panel active" id="chess" onclick="OfficeBearers(this.id)"
                 style="background-image: url(https://raw.githubusercontent.com/karuppan-the-pentester/7-days-70-project/master/01-Expanding%20Cards/img/Chess.jpg);">
                 <h3>Chess</h3>
             </div>
@@ -522,10 +575,7 @@
                 <h3>John Wick</h3>
             </div>
 
-            <div class="panel "
-                style="background-image: url(https://raw.githubusercontent.com/karuppan-the-pentester/7-days-70-project/master/01-Expanding%20Cards/img/Joker.jpg);">
-                <h3>Joker</h3>
-            </div>
+
 
 
 
@@ -540,13 +590,13 @@
 
         <section class="card-contt">
             <div class="card-container">
-                <div class="card">
+                <div class="card" id="techh" onclick="WorkWithUs(this.id)">
                     <div class="card-top">
-                        <a href=""><img src="./images/c1.png" alt="Unsplash Photo"></a>
+                        <a><img src="./images/c1.png" alt="Unsplash Photo"></a>
                     </div>
                     <div class="card-content">
                         <!-- <h6 class="tag tag-travel"> for Orange</h6> -->
-                        <a href="">
+                        <a>
                             <h3 class="title">Contribute to Tech</h3>
                         </a>
                         <!-- <p>Advance Advocate Management Ai</p> -->
@@ -555,12 +605,12 @@
 
                 <div class="card">
                     <div class="card-top">
-                        <a href=""><img src="./images/c2.png" alt="Unsplash Photo"></a>
+                        <a><img src="./images/c2.png" alt="Unsplash Photo"></a>
                     </div>
                     <div class="card-content">
                         <!-- <h6 class="tag tag-travel"> for Green -->
                         </h6>
-                        <a href="">
+                        <a>
                             <h3 class="title">Contribute to Fund</h3>
                         </a>
                         <!-- <p>Advance Advocate Management Ai</p> -->
@@ -569,11 +619,11 @@
 
                 <div class="card">
                     <div class="card-top">
-                        <a href=""><img src="./images/c3.png" alt="Unsplash Photo"></a>
+                        <a><img src="./images/c3.png" alt="Unsplash Photo"></a>
                     </div>
                     <div class="card-content">
                         <!-- <h6 class="tag tag-travel"> for Blue</h6> -->
-                        <a href="">
+                        <a>
                             <h3 class="title">Contribute to Network</h3>
                         </a>
                         <!-- <p>Advance Advocate Management Ai</p> -->
@@ -704,7 +754,7 @@
 
             <div class="con_m">
                 <div class="bl">
-                    <a href="#Locon" onclick="currentSlide(2)">Contact</a>
+                    <a href="#Locon">Contact</a>
                 </div>
                 <li class="links_b">
                     <!-- <a href="#" target="_blank">Read Whitepaper</a> -->
@@ -974,11 +1024,56 @@
 
 
     <script>
-        function blurScreen() {
-            document.getElementById("blurbg").style.display = "none";
 
+        function worksofar(id) {
+            const element = document.getElementById(id).querySelector('.animm');
 
+            // Remove and re-apply the animation to make it continuous
+            element.style.animation = 'none'; // Disable animation temporarily
+            element.offsetHeight; // Force a reflow, flushing the CSS changes
+            element.style.animation = ''; // Re-apply the animation
+
+            // Add a timer to reset the animation periodically if you want to repeat continuously
+            setTimeout(() => {
+                element.style.animation = 'none';
+                void element.offsetWidth; // Trigger reflow
+                element.style.animation = ''; // Restart the animation
+            }, 6000); // Adjust the time (here 6s) to match your animation duration
         }
+
+
+
+
+        function blurScreen() {
+            document.getElementById("blur_bg").style.display = "none";
+
+            document.getElementById("OurWorkSoFar").style.display = "none";
+            document.getElementById("OfficeBearers").style.display = "none";
+            document.getElementById("WorkWithUs").style.display = "none";
+
+            document.getElementById("boir").style.visibility = "hidden";
+            document.getElementById("b2").style.visibility = "hidden";
+            document.getElementById("bi3").style.visibility = "hidden";
+        }
+
+        function worksofar(name) {
+            document.getElementById("blur_bg").style.display = "block";
+            document.getElementById("OurWorkSoFar").style.display = "block";
+            document.getElementById("boir").style.visibility = "visible";
+        }
+
+        function OfficeBearers(name) {
+            document.getElementById("blur_bg").style.display = "block";
+            document.getElementById("OfficeBearers").style.display = "block";
+            document.getElementById("b2").style.visibility = "visible";
+        }
+
+        function WorkWithUs(name) {
+            document.getElementById("blur_bg").style.display = "block";
+            document.getElementById("WorkWithUs").style.display = "block";
+            document.getElementById("bi3").style.visibility = "visible";
+        }
+
 
     </script>
 

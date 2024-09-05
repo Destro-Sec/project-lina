@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Stakeholders</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      color: #f9a825;
+    }
+
+    .search-container {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+      position: sticky;
+      top: 0;
+      background-color: #121212;
+      padding: 10px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .search-container input {
+      padding: 10px;
+      width: 60%;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      transition: width 0.4s ease;
+    }
+
+    .search-container input:focus {
+      width: 80%;
+      outline: none;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+      border: 3px solid #f9a825;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info h3 {
+      margin: 0;
+      font-size: 24px;
+      color: #f9a825;
+    }
+
+    .info p {
+      margin: 5px 0;
+      color: #cfcfcf;
+    }
+
+    .info span {
+      color: #f9a825;
+    }
+
+    .card-container {
+      width: 100%;
+      max-width: 900px;
+      overflow-y: scroll;
+    }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #f9a825;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Stakeholders</h1>
+  <div class="search-container">
+    <input type="text" id="searchBar" onkeyup="searchStakeholders()" placeholder="Search by name or role...">
+  </div>
+
+  <div class="card-container" id="stakeholdersContainer">
+    <!-- Cards will be populated here -->
+  </div>
+
+  <script>
+    const stakeholders = [
+      {
+        name: "John Doe",
+        role: "CEO",
+        image: "https://via.placeholder.com/100",
+        percentage: "85%",
+        bio: "John is an experienced leader with 15 years in the industry."
+      },
+      {
+        name: "Jane Smith",
+        role: "CTO",
+        image: "https://via.placeholder.com/100",
+        percentage: "90%",
+        bio: "Jane leads the tech team with cutting-edge innovations."
+      },
+      {
+        name: "Alice Brown",
+        role: "CFO",
+        image: "https://via.placeholder.com/100",
+        percentage: "80%",
+        bio: "Alice manages financial planning and risk management."
+      },
+      {
+        name: "Robert Wilson",
+        role: "COO",
+        image: "https://via.placeholder.com/100",
+        percentage: "88%",
+        bio: "Robert oversees the company's operational excellence."
+      }
+    ];
+
+    function populateStakeholders() {
+      const container = document.getElementById('stakeholdersContainer');
+      container.innerHTML = '';
+      
+      stakeholders.forEach(stakeholder => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+        card.innerHTML = `
+          <img src="${stakeholder.image}" alt="${stakeholder.name}">
+          <div class="info">
+            <h3>${stakeholder.name}</h3>
+            <p><strong>Role:</strong> ${stakeholder.role}</p>
+            <p><strong>Completion:</strong> <span>${stakeholder.percentage}</span></p>
+            <p>${stakeholder.bio}</p>
+          </div>
+        `;
+        
+        container.appendChild(card);
+      });
+    }
+
+    function searchStakeholders() {
+      const searchValue = document.getElementById('searchBar').value.toLowerCase();
+      const filteredStakeholders = stakeholders.filter(stakeholder => {
+        return stakeholder.name.toLowerCase().includes(searchValue) ||
+               stakeholder.role.toLowerCase().includes(searchValue);
+      });
+
+      const container = document.getElementById('stakeholdersContainer');
+      container.innerHTML = '';
+
+      filteredStakeholders.forEach(stakeholder => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+        card.innerHTML = `
+          <img src="${stakeholder.image}" alt="${stakeholder.name}">
+          <div class="info">
+            <h3>${stakeholder.name}</h3>
+            <p><strong>Role:</strong> ${stakeholder.role}</p>
+            <p><strong>Completion:</strong> <span>${stakeholder.percentage}</span></p>
+            <p>${stakeholder.bio}</p>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    // Initially populate with all stakeholders
+    populateStakeholders();
+  </script>
+
+</body>
+</html>
