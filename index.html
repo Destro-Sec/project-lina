@@ -997,28 +997,24 @@
         });
 
 
-        const images = ['./images/hq.jpeg', './images/hq1.jpeg']; // Array of images
 
+        const images = ['./images/hq.jpeg', './images/hq1.jpeg'];
+        let currentImageIndex = 0;
 
         const imgElement = document.getElementById('carouselImage');
 
         function slideImage() {
-            // Trigger the slide-out animation
             imgElement.style.animation = 'slide-out 1s forwards';
 
             setTimeout(() => {
-                imgElement.src = images[0];
+                currentImageIndex = (currentImageIndex + 1) % images.length; 
+                imgElement.src = images[currentImageIndex];
                 imgElement.style.animation = 'slide-in 1s forwards';
-            }, 1000);
-
-            setTimeout(() => {
-                imgElement.src = images[1];
-                imgElement.style.animation = 'slide-in 1s forwards';
-            }, 1000);
-
-
+            }, 1000); 
         }
-        setInterval(slideImage, 3000);
+
+        setInterval(slideImage, 5000);
+
 
 
 
@@ -1043,7 +1039,7 @@
             });
         }
 
-        // Set an interval to cycle through the panels every 5 seconds
+        
         setInterval(() => {
             if (currentIndex >= panels.length) {
                 currentIndex = 0; // Reset index if it exceeds the number of panels
