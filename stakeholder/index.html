@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -105,9 +106,9 @@
       background: #f9a825;
       border-radius: 5px;
     }
-
   </style>
 </head>
+
 <body>
 
   <h1>Stakeholders</h1>
@@ -121,52 +122,52 @@
 
   <script>
     const stakeholders = [
-    { 
-      name: "Mr. Karuppasamy K", 
-      image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+      {
+        name: "Mr. Karuppasamy K",
+        image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
       },
-      { 
-      name: "Adv. Sudipto Mazumdar", 
-      image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+      {
+        name: "Adv. Sudipto Mazumdar",
+        image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
       },
-      { 
-      name: "Mr. Pratyush Acharya", 
-      image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+      {
+        name: "Mr. Pratyush Acharya",
+        image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
       },
-      { 
-      name: "Mr. M. Hrithiknathan", 
-      image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+      {
+        name: "Mr. M. Hrithiknathan",
+        image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
       },
-      { 
-      name: "Mr. Laxman Bansal", 
-      image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+      {
+        name: "Mr. Laxman Bansal",
+        image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
       },
-      { 
-      name: "Mr. Rajen Bansal", 
-      image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+      {
+        name: "Mr. Rajen Bansal",
+        image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
       },
-      { 
-      name: "Mr. Sourasish Pahari", 
-      image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+      {
+        name: "Mr. Sourasish Pahari",
+        image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
       },
-      { 
-      name: "Ms. Amrapali Baral", 
-      image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+      {
+        name: "Ms. Amrapali Baral",
+        image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
       },
-      { 
-      name: "Mr. Purab Bhuwalka", 
-      image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+      {
+        name: "Mr. Purab Bhuwalka",
+        image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
       },
-      { 
-      name: "Mr. Adarsh Dayal", 
-      image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+      {
+        name: "Mr. Adarsh Dayal",
+        image: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
       },
     ];
 
     function populateStakeholders() {
       const container = document.getElementById('stakeholdersContainer');
       container.innerHTML = '';
-      
+
       stakeholders.forEach(stakeholder => {
         const card = document.createElement('div');
         card.classList.add('card');
@@ -177,7 +178,7 @@
             <h3>${stakeholder.name}</h3>
           </div>
         `;
-        
+
         container.appendChild(card);
       });
     }
@@ -186,7 +187,7 @@
       const searchValue = document.getElementById('searchBar').value.toLowerCase();
       const filteredStakeholders = stakeholders.filter(stakeholder => {
         return stakeholder.name.toLowerCase().includes(searchValue) ||
-               stakeholder.role.toLowerCase().includes(searchValue);
+          stakeholder.role.toLowerCase().includes(searchValue);
       });
 
       const container = document.getElementById('stakeholdersContainer');
@@ -215,4 +216,5 @@
   </script>
 
 </body>
+
 </html>

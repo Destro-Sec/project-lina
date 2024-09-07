@@ -1383,6 +1383,12 @@ section {
     margin-top: -20px;
 }
 
+#team .team-heading h4{
+    font-family: "azerete";
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
 .panel {
     background-size: auto 100%;
     background-position: center;
@@ -2505,7 +2511,7 @@ section {
     position: absolute;
     border: 2px solid rgba(255, 255, 255, 0);
     width: 100%;
-    bottom: 20%;
+    bottom: 12%;
     padding-left: 7%;
     transition: 0.3s ease-in-out;
     display: flex;
@@ -3141,6 +3147,11 @@ section {
         animation:
             typing 3.5s steps(40, end) infinite,
             blink-caret .75s step-end infinite;
+    }
+
+    #team .team-heading h4{
+        font-family: "azerete";
+        font-size: 3vw;
     }
 
 
