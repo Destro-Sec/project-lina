@@ -152,17 +152,50 @@
     }
 }
 
-.animm {
-    display: inline-block;
+.timeline-unverted .animm {
     overflow: hidden;
+    border-right: .15em solid #4D4DFF;
     white-space: nowrap;
-    border-right: 4px solid transparent;
-    /* Remove blinking cursor */
-    width: 0;
-    animation: typewrite 4s steps(30) forwards;
-    /* Adjust the time for speed */
+    margin: 0 0 0 auto;
+    margin-top: 50px;
+    animation:
+        typing 3.5s steps(40, end) infinite,
+        blink-caret .75s step-end infinite;
 }
 
+.timeline-inverted .animm {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #4D4DFF;
+    margin: 0;
+    margin-top: 50px;
+    animation:
+        typing 3.5s steps(40, end) infinite
+}
+
+
+@keyframes typing {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #4D4DFF;
+    }
+}
 
 
 
@@ -1238,24 +1271,6 @@ section {
     }
 }
 
-.animm {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 4px solid transparent;
-    /* Remove cursor */
-    width: 0;
-    animation: typewrite 4s steps(30) forwards, blinkDot 1s;
-    /* Combines both typewriting and blinking dot */
-}
-
-.animm::after {
-    content: '.';
-    /* The dot instead of a cursor */
-    opacity: 0;
-    animation: blinkDot 1s infinite;
-    /* Makes the dot blink */
-}
 
 
 
@@ -1391,6 +1406,14 @@ section {
     opacity: 0;
 }
 
+.panel h3:nth-child(1) {
+    bottom: 52px;
+}
+
+.panel h3:nth-child(1) {
+    bottom: 52px;
+}
+
 .panel.active {
     flex: 5;
 }
@@ -1508,9 +1531,9 @@ section {
     align-items: center;
     gap: 12vw;
     color: #fff;
-
     transition: 0.3s ease;
     width: 100%;
+    overflow: hidden; /* Ensure sliding effect stays within bounds */
 }
 
 .locam {
@@ -1520,7 +1543,34 @@ section {
     max-width: 32vw;
     border-radius: 7px;
     border: 2px solid rgba(63, 63, 63, 0.5);
+    opacity: 1;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    position: relative;
 }
+
+/* Keyframe animations for sliding effect */
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
 
 .locmi {
     font-size: 1vw;
@@ -1532,33 +1582,21 @@ section {
 
 .locamm {
     top: 0px;
-    /* display: flex; */
     align-items: center;
     flex-direction: column;
     height: 100%;
     width: 100%;
     min-height: 20vh;
     min-width: 10vw;
-
     max-height: 38vh;
     max-width: 28vw;
 }
 
 .locamm h3 {
     text-align: left;
-    /* width: 100%; */
-    /* bottom: 40vh;
-    position: absolute; */
-    /* margin-right: 7vw; */
-    font-size: 24px;
     font-size: 2vw;
 }
 
-.locamm h4 {
-    text-align: left;
-    /* width: 100%; */
-    top: 0vh;
-}
 
 .locac {
     padding: 5vw 5vw 6vw 5vw;
@@ -1985,12 +2023,36 @@ section {
 
 }
 
-#boir {
 
-    visibility: hidden;
-    display: block;
-    z-index: 100;
+
+#OurWorkSoFar {
+    display: none;
 }
+
+
+
+#OurWorkSoFar .boir {
+    border: 2px solid rgba(119, 119, 119, 0.555);
+    height: 70%;
+    width: 70%;
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%, -58%);
+    position: fixed;
+    background-color: black;
+    border-radius: 7px;
+    color: black;
+    transition: 0.3s ease-out;
+    z-index: 100;
+
+}
+
+
+
+
+
+
+
 
 #OurWorkSoFar .cls {
     font-size: 24px;
@@ -2041,13 +2103,18 @@ section {
 }
 
 #OurWorkSoFar .popc {
-    width: 100%;
+    width: 85%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: space-evenly;
+}
+
+#OurWorkSoFar .socials {
+    left: 63%;
+    top: 0;
 }
 
 #OurWorkSoFar .even_desc {
@@ -2151,6 +2218,12 @@ section {
     background-color: white;
 }
 
+#OurWorkSoFar .b3 {
+    left: 45%;
+    position: relative;
+    margin-left: 3%;
+}
+
 #OurWorkSoFar .b3:hover {
 
     color: white;
@@ -2186,6 +2259,22 @@ section {
     margin-top: 0;
     width: 70%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2275,13 +2364,18 @@ section {
 }
 
 #OfficeBearers .popc {
-    width: 100%;
+    width: 85%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: space-evenly;
+}
+
+#OfficeBearers .socials {
+    left: 63%;
+    top: 0;
 }
 
 #OfficeBearers .even_desc {
@@ -2385,6 +2479,12 @@ section {
     background-color: white;
 }
 
+#OurWorkSoFar .b3 {
+    left: 45%;
+    position: relative;
+    margin-left: 3%;
+}
+
 #OfficeBearers .b3:hover {
 
     color: white;
@@ -2405,7 +2505,7 @@ section {
     position: absolute;
     border: 2px solid rgba(255, 255, 255, 0);
     width: 100%;
-    bottom: 8%;
+    bottom: 20%;
     padding-left: 7%;
     transition: 0.3s ease-in-out;
     display: flex;
@@ -2420,6 +2520,8 @@ section {
     margin-top: 0;
     width: 70%;
 }
+
+
 
 
 
@@ -2449,12 +2551,7 @@ section {
 
 
 
-#WorkWithUs #boir {
 
-    visibility: hidden;
-    display: block;
-
-}
 
 
 
@@ -2507,13 +2604,18 @@ section {
 }
 
 #WorkWithUs .popc {
-    width: 100%;
+    width: 85%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: space-evenly;
+}
+
+#WorkWithUs .socials {
+    left: 63%;
+    top: 0;
 }
 
 #WorkWithUs .even_desc {
@@ -2617,6 +2719,12 @@ section {
     background-color: white;
 }
 
+#WorkWithUs .b3 {
+    left: 45%;
+    position: relative;
+    margin-left: 3%;
+}
+
 #WorkWithUs .b3:hover {
 
     color: white;
@@ -2652,7 +2760,6 @@ section {
     margin-top: 0;
     width: 70%;
 }
-
 
 
 @media (max-width: 768px) {
@@ -2905,10 +3012,12 @@ section {
     }
 
     #OurWorkSoFar .b3 {
-        font-size: 1vw;
-        right: 20%;
         font-size: 3vw;
-        right: 28%;
+        right: 0;
+        left: 0;
+        margin-left: 3px;
+
+
     }
 
 
@@ -3019,5 +3128,20 @@ section {
         right: 20%;
         font-size: 3vw;
         right: 28%;
+        left: 20%;
     }
+
+    .animm {
+
+        overflow: hidden;
+        border-right: .15em solid #4D4DFF;
+        white-space: nowrap;
+        margin: 0 !important;
+        margin-top: 25px !important;
+        animation:
+            typing 3.5s steps(40, end) infinite,
+            blink-caret .75s step-end infinite;
+    }
+
+
 }

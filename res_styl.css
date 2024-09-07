@@ -107,9 +107,43 @@
     .container {
         width: 100vw;
     }
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5) {
-        display: none;
+
+    .panel h3 {
+        font-size: 10px;
+    }
+
+    #OfficeBearers .even_desc_r {
+        font-size: 9px;
+        margin-top: 2em;
+        line-height: 10px;
+    }
+
+    #OurWorkSoFar .even_desc_r {
+        font-size: 9px;
+        margin-top: 2em;
+        line-height: 10px;
+    }
+
+    #WorkWithUs .even_desc_r {
+        font-size: 9px;
+        margin-top: 2em;
+        line-height: 10px;
+    }
+
+
+    #OfficeBearers .socials {
+        left: 0;
+        top: -8px;
+    }
+
+    #OurWorkSoFar .botbut{
+        bottom: 18px;
+        padding-left: 8px;
+    }
+
+    #WorkWithUs .botbut{
+        bottom: 18px;
+        padding-left: 8px;
     }
 }
 
@@ -151,5 +185,3 @@
     }
 
 }
-
-
