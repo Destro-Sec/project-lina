@@ -812,44 +812,48 @@
             const activeBg = document.createElement('div');
             activeBg.classList.add('active-bg');
             document.querySelector('.navbar ul').appendChild(activeBg);
-
+        
             navLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
-
-                    e.preventDefault();
+                    // Check if the link is an external link (has target="_blank" or is an absolute URL)
+                    if (link.target === "_blank" || link.href.startsWith('http')) {
+                        return; // Allow default behavior (don't prevent link from opening)
+                    }
+        
+                    e.preventDefault(); // Prevent the default for internal links
+        
                     const targetSectionId = link.getAttribute('href');
                     const targetSection = document.querySelector(targetSectionId);
-
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-
+        
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+        
                     const clickedLinkRect = link.getBoundingClientRect();
                     const navbarRect = link.closest('ul').getBoundingClientRect();
                     const offsetLeft = clickedLinkRect.left - navbarRect.left;
-
+        
                     activeBg.style.width = `${clickedLinkRect.width}px`;
                     activeBg.style.transform = `translateX(${offsetLeft}px)`;
                     navLinks.forEach(link => link.classList.remove('active'));
                     link.classList.add('active');
                     window.history.pushState({}, '', link.getAttribute('href'));
-
                 });
             });
-
+        
             const activeLink = document.querySelector('.navbar ul li a.active');
-
+        
             if (activeLink) {
-
                 const activeLinkRect = activeLink.getBoundingClientRect();
                 const navbarRect = activeLink.closest('ul').getBoundingClientRect();
-
+        
                 activeBg.style.width = `${activeLinkRect.width}px`;
                 activeBg.style.transform = `translateX(${activeLinkRect.left - navbarRect.left}px)`;
-
             }
         });
-
+        
         //document.querySelector('.hamburger').addEventListener('click', function () {
         //    document.querySelector('.navbar').classList.toggle('active');
         //});
